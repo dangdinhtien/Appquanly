@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="6dp"
+    android:layout_height="120dp">
+    <RelativeLayout
+        android:background="#ffff99"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <TextView
+            android:id="@+id/sttdienthoai_sua"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:text="1"/>
+        <ImageView
+            android:id="@+id/daugach"
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+
+            android:layout_toRightOf="@id/sttdienthoai_sua"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="5dp"/>
+
+
+        <TextView
+            android:id="@+id/madienthoai_sua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/daugach"
+            android:textSize="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Mã DT: "/>
+        <TextView
+            android:id="@+id/madienthoai_1row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/madienthoai_sua"
+            android:textSize="15dp"
+            android:text="Mã Điện Thoại"/>
+
+        <TextView
+            android:id="@+id/tendienthoai_sua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+
+
+            android:layout_below="@+id/madienthoai_1row"
+            android:textSize="15dp"
+            android:layout_toRightOf="@id/daugach"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Tên ĐT: "/>
+        <TextView
+            android:id="@+id/tendienthoai_1row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_toRightOf="@id/tendienthoai_sua"
+            android:layout_below="@+id/madienthoai_1row"
+            android:textSize="15dp"
+            android:text="Tên Điện Thoại"/>
+
+        <TextView
+            android:id="@+id/soluongdienthoai_sua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tendienthoai_sua"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_toRightOf="@id/daugach"
+
+            android:padding="2dp"
+            android:text="Số lượng: "/>
+
+        <TextView
+            android:id="@+id/soluongdienthoai_1row_sua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tendienthoai_sua"
+            android:layout_toRightOf="@id/soluongdienthoai_sua"
+            android:padding="2dp"
+            android:text="Số lượng"/>
+
+        <TextView
+            android:id="@+id/giadienthoai_sua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/soluongdienthoai_1row_sua"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_toRightOf="@id/daugach"
+            android:padding="2dp"
+            android:text="Giá Điện Thoại: "/>
+        <TextView
+            android:id="@+id/giadienthoai_1row_sua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/soluongdienthoai_1row_sua"
+            android:layout_toRightOf="@id/giadienthoai_sua"
+            android:padding="2dp"
+            android:text="Gía"/>
+
+        <ImageView
+            android:id="@+id/imv_editdienthoai_sua"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/imv_deletedienthoai_sua"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_edit_black_24dp" />
+        <ImageView
+            android:id="@+id/imv_deletedienthoai_sua"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_delete_forever_black_24dp" />
+        <ImageView
+            android:id="@+id/imv_dt"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/madienthoai_sua"
+
+            android:src="@drawable/dt" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

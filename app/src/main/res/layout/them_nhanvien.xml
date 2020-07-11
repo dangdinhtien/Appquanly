@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:textSize="30dp"
+        android:text="Thêm nhân viên"
+        android:gravity="center"/>
+    <EditText
+        android:id="@+id/them_MaNV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập mã nhân viên"/>
+    <EditText
+        android:id="@+id/them_TenNV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập tên nhân viên"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+    <EditText
+        android:id="@+id/them_NgaySinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập ngày sinh nhân viên"/>
+        <Button
+            android:id="@+id/chonngaysinh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chon"
+            android:layout_weight="1"
+            android:onClick="ngaysinh"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+        <EditText
+            android:id="@+id/them_NgayVaoLam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_marginTop="10dp"
+            android:hint="Nhập ngày vào làm nhân viên"/>
+        <Button
+            android:id="@+id/chonngaylam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chon"
+            android:layout_weight="1"
+            android:onClick="ngaysinh"/>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/them_SDT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập số điện thoại nhân viên"/>
+    <EditText
+        android:id="@+id/them_Luongcoban"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập lương cơ bản"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp">
+
+        <Button
+            android:id="@+id/btn_ThemNV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:onClick="them"
+            android:text="thêm" />
+
+        <Button
+            android:id="@+id/btn_Huy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="100dp"
+            android:onClick="huy"
+            android:text="hủy" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="quay lại danh sách"
+        android:layout_marginLeft="100dp"
+        android:onClick="quaylai"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

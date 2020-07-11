@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SỬA THÔNG TIN NHÂN VIÊN"
+        android:textSize="20dp"
+        android:textColor="#ff0000"
+        android:gravity="center"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mã nhân viên"
+        />
+
+    <TextView
+        android:id="@+id/edtma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên nhân viên"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/edtten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ngày sinh"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/edtngaysinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/btnngaysinh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chon"
+        android:layout_weight="1"
+        android:onClick="ngaysinh"/>
+</LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Số điện thoại"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/edtsdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lương cơ bản"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/edtluongcoban"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/btnUpdateUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="updateUser"
+            android:text="Sửa" />
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="Huy"
+            android:text="Quay lại" />
+    </LinearLayout>
+</LinearLayout>

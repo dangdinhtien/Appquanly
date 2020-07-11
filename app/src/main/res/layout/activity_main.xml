@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#ff00"
+    >
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="540dp"
+        android:id="@+id/web"
+        />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imgql"
+        android:src="@drawable/boss"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imgnv"
+        android:src="@drawable/nv1"
+
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="120dp"
+        />
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/bando"
+        android:src="@drawable/bando"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="220dp"
+        />
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/ghichu"
+        android:src="@drawable/ghichu"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="320dp"
+        />
+
+
+
+
+</RelativeLayout>
