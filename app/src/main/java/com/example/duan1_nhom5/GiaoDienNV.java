@@ -6,11 +6,13 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.Window;
 
 
 import com.example.duan1_nhom5.fragment.Fragment_HoaDon;
 import com.example.duan1_nhom5.fragment.Fragment_SanPham;
 import com.example.duan1_nhom5.fragment.HangKho;
+import com.example.duan1_nhom5.fragment.ThongKe;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class GiaoDienNV extends AppCompatActivity {
@@ -19,15 +21,16 @@ public class GiaoDienNV extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_giao_dien_nv);
+        setTitle("Giao Diện Nhân Viên");
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomquannv);
         bottomNavigationView.setOnNavigationItemSelectedListener(navi);
 
-    /*    // Mặc đinh mới vào là Fragment Thống kê
+        // Mặc đinh mới vào là Fragment Sản phẩm
         if(savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new ThongKe()).commit();
-            navigationView.setCheckedItem(R.id.thongke);
-        }*/
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentnv,
+                    new Fragment_SanPham()).commit();
+        }
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navi =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -35,11 +38,11 @@ public class GiaoDienNV extends AppCompatActivity {
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                     Fragment fragment = null;
                     switch (menuItem.getItemId()){
-                        case R.id.hoadon:
-                            fragment = new Fragment_HoaDon();
-                            break;
                         case R.id.sp:
                             fragment = new Fragment_SanPham();
+                            break;
+                        case R.id.hoadon:
+                            fragment = new Fragment_HoaDon();
                             break;
                         case R.id.kho:
                             fragment = new HangKho();

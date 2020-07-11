@@ -15,7 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:menu="@menu/nv"
-        android:background="#ff00"
+        android:background="@color/colorPrimary"
+        app:tabTextColor="#fff"
         android:id="@+id/bottomquannv"/>
 
 </RelativeLayout>

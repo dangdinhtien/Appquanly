@@ -42,7 +42,7 @@ public class ThemLuongNhanVien extends AppCompatActivity {
         Stt = (EditText) findViewById(R.id.edtStt);
         edtSongaylam = (EditText) findViewById(R.id.edtSongaylam);
 
-        //
+
         spnMaNV.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int
@@ -100,9 +100,6 @@ public class ThemLuongNhanVien extends AppCompatActivity {
         }
     }
     public void thoat(View view){
-        finish();
-    }
-    public void showLuong(View view){
         finish();
     }
     public int checkPositionTheLoai(String strTheLoai){

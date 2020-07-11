@@ -1,55 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#ff00"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:gravity="center"
     >
-
-    <WebView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="540dp"
-        android:id="@+id/web"
-        />
-
+        android:layout_height="wrap_content"
+        android:text="Quản Lý"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="25dp"/>
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/imgql"
         android:src="@drawable/boss"
-        android:layout_marginTop="550dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="20dp"
         />
-
+    <View
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorPrimary" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhân Viên"
+        android:gravity="center"
+        android:textColor="#000"
+        android:layout_marginTop="100dp"
+        android:textSize="25dp"/>
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/imgnv"
         android:src="@drawable/nv1"
-
-        android:layout_marginTop="550dp"
-        android:layout_marginLeft="120dp"
+        android:layout_marginTop="20dp"
         />
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:id="@+id/bando"
-        android:src="@drawable/bando"
-        android:layout_marginTop="550dp"
-        android:layout_marginLeft="220dp"
-        />
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:id="@+id/ghichu"
-        android:src="@drawable/ghichu"
-        android:layout_marginTop="550dp"
-        android:layout_marginLeft="320dp"
-        />
-
-
-
-
-</RelativeLayout>
+</LinearLayout>

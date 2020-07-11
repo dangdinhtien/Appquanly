@@ -24,6 +24,7 @@ public class Login_quanly extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_quanly);
+        setTitle("Đăng Nhập");
         edtUsername = (EditText) findViewById(R.id.edtuser);
         edtPassword = (EditText) findViewById(R.id.edtpass);
 

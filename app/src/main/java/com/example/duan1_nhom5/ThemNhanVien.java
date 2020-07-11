@@ -59,9 +59,6 @@ public class ThemNhanVien extends AppCompatActivity {
     public void huy(View view){
         finish();
     }
-    public void quaylai(View view){
-        finish();
-    }
 
     public void them(View view)  {
         nhanVien_dao = new NhanVien_DAO(ThemNhanVien.this);

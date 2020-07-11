@@ -39,7 +39,6 @@ public class LuongNhanVien extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Nhân Viên");
         lvLuong = (ListView) view.findViewById(R.id.lvLuong);
         luong_dao = new Luong_DAO(getContext());
         dsLuong = luong_dao.getAlllLuong̣̣̣̣̣();
@@ -54,22 +53,22 @@ public class LuongNhanVien extends Fragment {
                 startActivity(intent);
             }
         });
-        lvLuong.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position,
-                                    long id) {
-                Luong luong = (Luong) parent.getItemAtPosition(position);
-                Intent intent = new
-                        Intent(getActivity(),ThemLuongNhanVien.class);
-                Bundle b = new Bundle();
-                b.putString("Stt", luong.getStt());
-                b.putString("MaNV", luong.getMaNV());
-                b.putString("SoNgayLam", luong.getSoNgaylam());
-
-                intent.putExtras(b);
-                startActivity(intent);
-            }
-        });
+//        lvLuong.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position,
+//                                    long id) {
+//                Luong luong = (Luong) parent.getItemAtPosition(position);
+//                Intent intent = new
+//                        Intent(getActivity(),ThemLuongNhanVien.class);
+//                Bundle b = new Bundle();
+//                b.putString("Stt", luong.getStt());
+//                b.putString("MaNV", luong.getMaNV());
+//                b.putString("SoNgayLam", luong.getSoNgaylam());
+//
+//                intent.putExtras(b);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 }

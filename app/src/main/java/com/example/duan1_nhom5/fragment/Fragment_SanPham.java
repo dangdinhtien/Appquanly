@@ -1,5 +1,7 @@
 package com.example.duan1_nhom5.fragment;
 
+import android.app.Activity;
+import android.icu.text.CaseMap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,19 +28,17 @@ public class Fragment_SanPham extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
       View view = inflater.inflate(R.layout.fragment_sanpham,container,false);
-
+        getActivity().setTitle("Sản Phẩm");
         return view;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-gv = view.findViewById(R.id.gvsanpham);
-dienThoai_dao = new DienThoai_DAO(getContext());
-list_dienthoai = new ArrayList<>();
-list_dienthoai = dienThoai_dao.laytatcaDienThoai();
-adapter = new NhapDienThoaiAdapter(list_dienthoai,getContext());
-gv.setAdapter(adapter);
-
-
+            gv = view.findViewById(R.id.gvsanpham);
+            dienThoai_dao = new DienThoai_DAO(getContext());
+            list_dienthoai = new ArrayList<>();
+            list_dienthoai = dienThoai_dao.laytatcaDienThoai();
+            adapter = new NhapDienThoaiAdapter(list_dienthoai,getContext());
+            gv.setAdapter(adapter);
     }
 }

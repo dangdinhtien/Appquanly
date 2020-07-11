@@ -1,43 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:layout_marginTop="10dp">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ff0000"
-        android:textSize="30dp"
-        android:text="Thêm nhân viên"
-        android:gravity="center"/>
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="Mã: "
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:textSize="24dp"/>
     <EditText
         android:id="@+id/them_MaNV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Nhập mã nhân viên"/>
+        android:hint="Nhập mã"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Tên: "
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:textSize="24dp"/>
     <EditText
         android:id="@+id/them_TenNV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Nhập tên nhân viên"/>
+        android:hint="Nhập tên"/>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="5">
+        <TextView
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:text="Ngày Sinh: "
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:textSize="24dp"/>
     <EditText
         android:id="@+id/them_NgaySinh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="4"
         android:layout_marginTop="10dp"
-        android:hint="Nhập ngày sinh nhân viên"/>
+        android:hint="dd/mm/yyyy"/>
         <Button
             android:id="@+id/chonngaysinh"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="chon"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
             android:layout_weight="1"
             android:onClick="ngaysinh"/>
     </LinearLayout>
@@ -46,36 +74,68 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="5">
+        <TextView
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:text="Ngày Vào Làm: "
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:textSize="24dp"/>
         <EditText
             android:id="@+id/them_NgayVaoLam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="4"
             android:layout_marginTop="10dp"
-            android:hint="Nhập ngày vào làm nhân viên"/>
+            android:hint="dd/mm/yyyy"/>
         <Button
             android:id="@+id/chonngaylam"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
             android:text="chon"
             android:layout_weight="1"
             android:onClick="ngaysinh"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:text="Số Điện Thoại: "
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:textSize="24dp"/>
 
     <EditText
         android:id="@+id/them_SDT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Nhập số điện thoại nhân viên"/>
+        android:hint="Nhập số điện thoại"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:text="Lương Cơ Bản: "
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:textSize="24dp"/>
     <EditText
         android:id="@+id/them_Luongcoban"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="Nhập lương cơ bản"/>
-
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -87,6 +147,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
             android:onClick="them"
             android:text="thêm" />
 
@@ -96,15 +158,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="100dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
             android:onClick="huy"
             android:text="hủy" />
     </LinearLayout>
-    <Button
-        android:id="@+id/btn_show"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="quay lại danh sách"
-        android:layout_marginLeft="100dp"
-        android:onClick="quaylai"
-        android:layout_marginTop="10dp"/>
 </LinearLayout>

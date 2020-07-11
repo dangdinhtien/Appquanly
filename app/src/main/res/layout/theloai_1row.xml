@@ -8,8 +8,6 @@
 
 
     <RelativeLayout
-
-        android:background="#C3DDE9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -34,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/matheloai"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#000"
             android:text="Mã: "
             android:padding="2dp"
             android:layout_toRightOf="@id/daugach1" />
@@ -50,21 +48,21 @@
             android:layout_toRightOf="@id/matheloai" />
 
         <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tentheloai"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="Thể loại: "
-        android:padding="2dp"
-        android:layout_toRightOf="@id/matheloai_1row" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tentheloai"
+            android:textColor="#000"
+            android:text="Thể loại: "
+            android:padding="2dp"
+            android:layout_toRightOf="@id/matheloai_1row" />
 
         <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tentheloai_1row"
-        android:text="Tên thể loại: "
-        android:padding="2dp"
-        android:layout_toRightOf="@id/tentheloai" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tentheloai_1row"
+            android:text="Tên thể loại: "
+            android:padding="2dp"
+            android:layout_toRightOf="@id/tentheloai" />
 
 
         <TextView
@@ -72,7 +70,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/vitri"
             android:layout_below="@id/matheloai_1row"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#000"
             android:text="Vị trí: "
             android:padding="2dp"
             android:layout_toRightOf="@id/daugach1" />

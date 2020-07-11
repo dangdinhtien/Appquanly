@@ -9,7 +9,7 @@
 
 
     <RelativeLayout
-        android:background="#D68812"
+        android:background="#fff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/hoadon"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#000"
             android:text="Mã hóa đơn: "
             android:padding="2dp"
             android:layout_toRightOf="@id/daugach1" />
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/ngaythem"
             android:layout_below="@id/hoadon"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#000"
             android:text="Ngày xuất hóa đơn: "
             android:padding="2dp"
             android:layout_toRightOf="@id/daugach1" />
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtmadt_them_hoadon"
             android:layout_below="@id/ngaythem"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#000"
             android:text="Mã điện thoại "
             android:padding="2dp"
             android:layout_toRightOf="@id/daugach1" />

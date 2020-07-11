@@ -38,7 +38,6 @@ public class NVChuyenCan extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Sách Bán chạy");
         lv = (ListView) view.findViewById(R.id.lvNhanvienchuyencan);
         edThang = (EditText) view.findViewById(R.id.edTthang);
         btnnhanviencc = view.findViewById(R.id.btn);
@@ -50,9 +49,8 @@ public class NVChuyenCan extends Fragment {
         });
     }
     private void Nhanvienchuyencan(){
-        if (Integer.parseInt(edThang.getText().toString())>13 ||
-                Integer.parseInt(edThang.getText().toString())<0){
-            Toast.makeText(getActivity(),"Không đúng định dạng tháng (1- 12)",Toast.LENGTH_SHORT).show();
+        if ((edThang.getText().toString()) != null){
+            Toast.makeText(getActivity(),"Không đúng tên",Toast.LENGTH_SHORT).show();
         }else {
             nhanVien_dao = new NhanVien_DAO(getActivity());
             dsSach = NhanVien_DAO.getNhanvienchuyencan(edThang.getText().toString());

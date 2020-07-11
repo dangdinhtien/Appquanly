@@ -28,6 +28,7 @@ public class QLNhanVien extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        getActivity().setTitle("Quản Lý Nhân Viên");
         viewPager2 = view.findViewById(R.id.viewpager);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(getFragmentManager());
         sectionsPagerAdapter.addFragment(new NhanVien());
@@ -38,7 +39,7 @@ public class QLNhanVien extends Fragment {
         tabLayout = view.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager2);
         tabLayout.getTabAt(0).setText("Nhân Viên");
-        tabLayout.getTabAt(1).setText("Nhân Viên Chuyên Cần");
+        tabLayout.getTabAt(1).setText("Tìm Kiếm Nhân Viên");
         tabLayout.getTabAt(2).setText("Lương Nhân Viên");
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 

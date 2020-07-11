@@ -14,11 +14,11 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="30dp"
-            android:textColor="#FFEB3B"
+            android:textColor="#ff00"
             android:textStyle="bold"
             android:layout_marginBottom="30dp"
             android:fontFamily="serif"
-            android:text="Quản Lý CH Điện Thoại"/>
+            android:text="Quản Lý Cưa hàng Điện Thoại"/>
 
         <ImageView
             android:layout_width="310dp"

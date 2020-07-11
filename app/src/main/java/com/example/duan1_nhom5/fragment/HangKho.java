@@ -21,10 +21,10 @@ public class HangKho extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_hangkho,container,false);
-
     }
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        getActivity().setTitle("Hang kho");
         viewPager = view.findViewById(R.id.viewpager2);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(getFragmentManager());
         sectionsPagerAdapter.addFragment(new Fragment_TheLoai());

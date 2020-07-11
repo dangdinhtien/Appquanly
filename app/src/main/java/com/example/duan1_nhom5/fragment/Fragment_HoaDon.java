@@ -44,6 +44,7 @@ public class Fragment_HoaDon extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_hoadon, container, false);
+        getActivity().setTitle("Hóa Đơn");
 
         list = new ArrayList<>();
         hoadon_DAO = new HoaDon_DAO(getActivity());

@@ -29,6 +29,7 @@ public class SuaThongTinNV extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sua_thongtin_nhanvien);
+        setTitle("Sửa Thông tin");
         //ánh xạ
 
         txtma = findViewById(R.id.edtma);
