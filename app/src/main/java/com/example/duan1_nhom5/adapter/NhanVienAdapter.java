@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,18 +17,22 @@ import com.example.duan1_nhom5.model.NhanVien;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 public class NhanVienAdapter extends BaseAdapter {
 
     public Activity context;
+        List<NhanVien> arrnhanvien;
         ArrayList<NhanVien> list;
         NhanVien_DAO dao;
+    private Filter NhanvienFilter;
     public LayoutInflater inflater;
     SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 
     public NhanVienAdapter(Activity context, ArrayList<NhanVien> list){
         super();
         this.context = context;
+        this.arrnhanvien = list;
         this.list = list;
         this.inflater =
                 (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -110,6 +115,46 @@ public class NhanVienAdapter extends BaseAdapter {
     public void changeDataset(ArrayList<NhanVien> items){
         this.list = items;
         notifyDataSetChanged();
+    }
+    public void resetData() {
+        arrnhanvien = list;
+    }
+    public Filter getFilter() {
+        if (NhanvienFilter == null)
+            NhanvienFilter = new CustomFilter();
+        return NhanvienFilter;
+    }
+    private class CustomFilter extends Filter {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            FilterResults results = new FilterResults();
+            // We implement here the filter logic
+            if (constraint == null || constraint.length() == 0) {
+                results.values = list;
+                results.count = list.size();
+            }
+            else {
+                List<NhanVien> lsNhanvien = new ArrayList<NhanVien>();
+                for ( NhanVien p : arrnhanvien) {
+                    if
+                    (p.getMaNV().toUpperCase().startsWith(constraint.toString().toUpperCase()))
+                        lsNhanvien.add(p);
+                }
+                results.values = lsNhanvien;
+                results.count = lsNhanvien.size();
+            }
+            return results;
+        }
+        @Override
+        protected void publishResults(CharSequence constraint,
+                                      FilterResults results) {
+            if (results.count == 0)
+                notifyDataSetInvalidated();
+            else {
+                arrnhanvien = (List<NhanVien>) results.values;
+                notifyDataSetChanged();
+            }
+        }
     }
 
 }

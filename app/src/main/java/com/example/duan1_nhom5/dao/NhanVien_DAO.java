@@ -80,7 +80,29 @@ public class NhanVien_DAO {
         }cr.close();
         return danhsachnhanvien;
     }
+    public static ArrayList<NhanVien> getAllnhanvienv() throws ParseException {
+        ArrayList<NhanVien> danhsachnhanvien = new ArrayList<>();
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cr = db.query("NhanVien", null, null,
+                null, null, null, null);
 
+        cr.moveToFirst();
+        while (!cr.isAfterLast()){
+            NhanVien nv = new NhanVien();
+            nv.setMaNV(cr.getString(0));
+            nv.setTenNV(cr.getString(1));
+            nv.setNgaySinh(cr.getString(2));
+            nv.setNgayVaoLam(sdf.parse(cr.getString(3)));
+            nv.setSDT(cr.getString(4));
+            nv.setLuongCoBan(cr.getFloat(5));
+
+
+            danhsachnhanvien.add(nv);
+            Log.d("//======",nv.toString());
+            cr.moveToNext();
+        }cr.close();
+        return danhsachnhanvien;
+    }
 
     // check trùng MaNV khi thêm vào database
     public Boolean checkMaNV(String MaNV){
