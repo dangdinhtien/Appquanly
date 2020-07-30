@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:fillViewport="false">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            >
+            <ImageView
+                android:id="@+id/imgCircleUser"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/userr"
+                android:layout_marginRight="20dp"/>
+            <TextView
+                android:id="@+id/slogan_done"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#334455"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/imgCircleUser"
+                android:text="Chào mừng bạn!"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.9dp"
+            android:background="#CCCCCC"
+            android:layout_margin="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <TextView
+                android:id="@+id/tv_them_nhanvien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thêm Nhân Viên"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:textSize="15dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.9dp"
+            android:background="#CCCCCC"
+            android:layout_margin="10dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <TextView
+                android:id="@+id/tv_tinhluong_nhanvien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tính Lương Nhân Viên"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:textSize="15dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.9dp"
+            android:background="#CCCCCC"
+            android:layout_margin="10dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <TextView
+                android:id="@+id/tv_them_sanpham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Danh Sách Lương Nhân Viên"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:textSize="15dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.9dp"
+            android:background="#CCCCCC"
+            android:layout_margin="10dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/relativeSPDM"
+            >
+            <TextView
+                android:id="@+id/tv_them_theloai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thêm Thể Loại"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:textSize="15dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.9dp"
+            android:background="#CCCCCC"
+            android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/btnDangXuat"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng xuất"
+            android:textSize="20dp"
+            android:onClick="dangxuat"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_logout"/>
+    </LinearLayout>
+</ScrollView>
